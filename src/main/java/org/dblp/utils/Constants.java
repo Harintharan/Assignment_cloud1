@@ -11,4 +11,10 @@ public class Constants {
     public static final String POSSIBLE_END_TAGS = "possible-end-tags";
 
     public static final String DEFAULT_BUCKET_SIZE = "5";
+
+    public static final String AUTHORSHIP_SCORE = "authorship-score";
+
+    public static final String MEAN_MEDIAN_MAX = "mean-median-max";
+
+
 }
