@@ -26,11 +26,11 @@ Maven
 
 # GitHub Repository
 
-👉 Clone the project:
+ Clone the project:
 ```bash
 git clone https://github.com/Harintharan/Assignment_cloud1.git
 cd Assignment_cloud1
-
+```
 ## How to Build
 
 mvn clean package
@@ -46,13 +46,13 @@ hadoop jar target/DblpJob-1.0-SNAPSHOT.jar org.dblp.driver.MapReduceJobRunner
 /output/max_median_avg 
 /output/sort_stage1 
 /output/sort_stage2
-
+```
 
 
 # Note: All /output/... directories must not already exist in HDFS. If needed, clean up:
 ```bash
 hdfs dfs -rm -r /output/bucketing /output/authorship_score /output/max_median_avg /output/sort_stage1 /output/sort_stage2
-
+```
 
 # View Sample Output:
 ```bash
