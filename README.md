@@ -8,7 +8,7 @@ This project implements a multi-stage Hadoop MapReduce pipeline that processes t
 
 ##  Input Dataset
 
-- **Source:** [DBLP XML Dataset](https://www.kaggle.com/datasets/dheerajmpai/dblp2023)
+- **Source:** [DBLP XML Dataset](https://www.kaggle.com/datasets/dheerajmpai/dblp2023)  dblp.xml(3.79 GB)
 - **Format:** XML ( `dblp.xml`)
 - **HDFS Upload:**  
   ```bash
