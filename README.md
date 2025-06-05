@@ -8,8 +8,8 @@ This project implements a multi-stage Hadoop MapReduce pipeline that processes t
 
 ##  Input Dataset
 
-- **Source:** [DBLP XML Dataset](https://dblp.org/)
-- **Format:** XML (e.g., `dblp.xml`)
+- **Source:** [DBLP XML Dataset](https://www.kaggle.com/datasets/dheerajmpai/dblp2023)
+- **Format:** XML ( `dblp.xml`)
 - **HDFS Upload:**  
   ```bash
   hdfs dfs -mkdir -p /input
@@ -24,6 +24,13 @@ Custom XML InputFormat (DBLPXmlInputFormat)
 
 Maven
 
+# GitHub Repository
+
+👉 Clone the project:
+```bash
+git clone https://github.com/Harintharan/Assignment_cloud1.git
+cd Assignment_cloud1
+
 ## How to Build
 
 mvn clean package
@@ -31,7 +38,7 @@ mvn clean package
 # creates the executable JAR in:
 target/DblpJob-1.0-SNAPSHOT.jar
 
-
+```bash
 hadoop jar target/DblpJob-1.0-SNAPSHOT.jar org.dblp.driver.MapReduceJobRunner 
 /input/dblp.xml 
 /output/bucketing 
@@ -43,11 +50,12 @@ hadoop jar target/DblpJob-1.0-SNAPSHOT.jar org.dblp.driver.MapReduceJobRunner
 
 
 # Note: All /output/... directories must not already exist in HDFS. If needed, clean up:
+```bash
 hdfs dfs -rm -r /output/bucketing /output/authorship_score /output/max_median_avg /output/sort_stage1 /output/sort_stage2
 
 
 # View Sample Output:
-
+```bash
 hdfs dfs -cat /output/bucketing/part-r-00000 | head
 hdfs dfs -cat /output/authorship_score/part-r-00000 | head
 hdfs dfs -cat /output/max_median_avg/part-r-00000 | head
